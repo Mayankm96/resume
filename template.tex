@@ -1,0 +1,289 @@
+%% start of file `template.tex'.
+%% Copyright 2006-2015 Xavier Danaux (xdanaux@gmail.com).
+%
+% This work may be distributed and/or modified under the
+% conditions of the LaTeX Project Public License version 1.3c,
+% available at http://www.latex-project.org/lppl/.
+
+
+\documentclass[11pt,a4paper,roman]{moderncv}        % possible options include font size ('10pt', '11pt' and '12pt'), paper size ('a4paper', 'letterpaper', 'a5paper', 'legalpaper', 'executivepaper' and 'landscape') and font family ('sans' and 'roman')
+
+%%----------- NEW COLOR---------------------
+\RequirePackage{filecontents}
+\begin{filecontents*}{moderncvcolorburgundy.sty}
+%% start of file `moderncvcolorburgundy.sty'.
+%% Copyright 2006-2013 Xavier Danaux (xdanaux@gmail.com).
+%
+\NeedsTeXFormat{LaTeX2e}
+\ProvidesPackage{moderncvcolorburgundy}[2013/02/09 v1.3.0 modern curriculum vitae and letter color scheme: burgundy]
+
+\definecolor{color0}{rgb}{0,0,0}% black
+\definecolor{color1}{rgb}{0.545098,0,0}% burgundy
+\definecolor{color1}{rgb}{0.4,0.4,0.4} % Testcolor-------being used 
+\definecolor{color2}{rgb}{0.45,0.45,0.45}% grey
+\endinput
+%% end of file `moderncvcolorburgundy.sty'.
+\end{filecontents*}
+
+% moderncv themes
+\moderncvstyle{casual}                             % style options are 'casual' (default), 'classic', 'banking', 'oldstyle' and 'fancy'
+\moderncvcolor{burgundy}                               % color options 'black', 'blue' (default), 'burgundy', 'green', 'grey', 'orange', 'purple' and 'red'
+%\renewcommand{\familydefault}{\sfdefault}         % to set the default font; use '\sfdefault' for the default sans serif font, '\rmdefault' for the default roman one, or any tex font name
+%\nopagenumbers{}                                  % uncomment to suppress automatic page numbering for CVs longer than one page
+
+% character encoding
+%\usepackage[utf8]{inputenc}                       % if you are not using xelatex ou lualatex, replace by the encoding you are using
+%\usepackage{CJKutf8}                              % if you need to use CJK to typeset your resume in Chinese, Japanese or Korean
+
+% adjust the page margins
+%\usepackage[scale=0.75]{geometry}
+\usepackage[left=0.65 in,top=0.7in,right=0.65in,bottom=0.7in]{geometry} % Document margins
+
+\setlength{\hintscolumnwidth}{2.8cm}                % if you want to change the width of the column with the dates
+
+% personal data
+\name{Mayank}{Mittal}
+
+%\address{street and number}{postcode city}{country}% optional, remove / comment the line if not wanted; the "postcode city" and "country" arguments can be omitted or provided empty
+%\phone[mobile]{+1~(234)~567~890}                   % optional, remove / comment the line if not wanted; the optional "type" of the phone can be "mobile" (default), "fixed" or "fax"
+%\phone[fixed]{+2~(345)~678~901}
+%\phone[fax]{+3~(456)~789~012}
+\email{mayankm@iitk.ac.in}                               % optional, remove / comment the line if not wanted
+\homepage{mayankm96.github.io.com}                         % optional, remove / comment the line if not wanted
+%\social[linkedin]{john.doe}                        % optional, remove / comment the line if not wanted
+%\social[twitter]{jdoe}                             % optional, remove / comment the line if not wanted
+\social[github]{mayankm96}                              % optional, remove / comment the line if not wanted
+%\extrainfo{additional information}                 % optional, remove / comment the line if not wanted
+%\photo[64pt][0.4pt]{picture}                       % optional, remove / comment the line if not wanted; '64pt' is the height the picture must be resized to, 0.4pt is the thickness of the frame around it (put it to 0pt for no frame) and 'picture' is the name of the picture file
+
+% bibliography adjustements (only useful if you make citations in your resume, or print a list of publications using BibTeX)
+%   to show numerical labels in the bibliography (default is to show no labels)
+\makeatletter\renewcommand*{\bibliographyitemlabel}{\@biblabel{\arabic{enumiv}}}\makeatother
+%   to redefine the bibliography heading string ("Publications")
+%\renewcommand{\refname}{Articles}
+
+% bibliography with mutiple entries
+%\usepackage{multibib}
+%\newcites{book,misc}{{Books},{Others}}
+
+%_------- PACKAGES FROM ANOTHER
+\usepackage{array}
+\usepackage{tabulary}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{fontawesome}
+\usepackage{calrsfs}\usepackage[english]{babel}
+
+%--- MODIFY SECTION STYLE
+% \makeatletter
+% \renewcommand\sectionfont{\bfseries}
+% \renewcommand*{\sectionstyle}[1]{{%
+%   \sectionfont\rule[-.5ex]{0pt}{0em}\MakeUppercase{#1}}}
+% \makeatother
+
+%% use \scshape in all section titles
+\renewcommand{\sectionfont}{\normalfont\Large\mdseries\scshape}
+
+%---------- REMOVE DOT
+\usepackage{xpatch}
+\xpatchcmd{\cventry}{.\strut}{\strut}{}{}
+
+%LINK COLOR
+\newcommand\Colorhref[3][blue]{\href{#2}{\small\color{#1}#3}}
+
+%----------------------------------------------------------------------------------
+%            content
+%--------------------------------------------------------------------------------
+
+\begin{document}
+
+%-----       resume       --------------------------------------------------------
+
+%\makecvtitle
+{\fontsize{0.8cm}{1cm}\selectfont \textbf{MAYANK MITTAL}} \hfill \textbf{E-mail: }mayankm@iitk.ac.in \\
+Senior, Dept. of Electrical Engineering, IIT Kanpur, India\hfill \textbf{Website: }\Colorhref{https://mayankm96.github.io}{mayankm96.github.io} \\
+\noindent\rule[1ex]{\linewidth}{1pt}
+\noindent\rule[3ex]{\linewidth}{1pt}
+
+\vspace{-7pt}
+
+\section{Education}
+\cventry{2014--present}{Bachelor of Technology}{Indian Institute of Technology}{Kanpur}{\textit{CGPA- 9.3/10}}{Major: Electrical Engineering}  % arguments 3 to 6 can be left empty
+
+\cventry{2014}{Grade XII}{Amity International School}{Noida}{\textit{Result- 97\%}}{}
+\cventry{2012}{Grade X}{Amity International School}{Noida}{\textit{CGPA- 10/10}}{}
+
+\section{Research Experience}
+\cventry{May--July '17}{Predicting Landing Sites from Aerial Images of Disaster Scenes}{}{}{}{
+\textit{University of Freiburg}, Prof. Wolfram Burgard 
+% \textit{Supervisors:}  Prof. Wolfram Burgard (University of Freiburg)
+% \newline
+% The project aims to use deep learning to detect landing sites for a drone in a hostile environment by only using the input from a ground facing camera mounted on it.%
+\begin{itemize}%
+% \renewcommand\labelitemi{--}
+\item \textbf{Created large dataset}, using Mircrosoft drone \textbf{simulator AirSim}, comprising of scene, normals and depth views of a self- designed map of a disaster affected region
+\item Trained deep learning model inspired from \textbf{`MarrRevisisted'} architecture by Aayush B. \textit{et al.} on the created dataset; performed a qualitative and quantitative analysis of the results
+\item Proposed a \textbf{pipeline to extract candidate landing sites}, using the trained model and input RGB-D data, based on histogram based segmentation \textbf{in real-time}
+\end{itemize}}
+
+\vspace{3pt}
+
+\cventry{Nov '14--present \\
+\Colorhref{https://auviitk.com}{website}\\ 
+\Colorhref{https://github.com/AUV-IITK}{github}\\
+\Colorhref{https://github.com/Mayankm96/Mayankm96.github.io/blob/source/assets/documents/projects/ee392-report.pdf}{report}}{Autonomous Underwater Vehicle (AUV)}{}{}{}{
+\textit{IIT Kanpur}, Prof. K.S. Venkatesh \& Prof. Sachin Y. Shinde
+% \textit{Supervisors:} Prof. Sachin Y. Shinde, and Prof. K.S. Venkatesh
+% \newline
+% The severity of challenges in robotics increases for an underwater system due to attenuation of communication and GPS signals. In this students' initiated project, we look at some of these problems in order to improve the autonomy of an AUV. As a prime member of this team, I have worked in various divisions of the project; of which a few of my contributions are listed below:%
+\begin{itemize}%
+\item Designed and developed \textbf{Institute's first AUV}, \textit{Varun}, which uses computer vision and dead- reckoning sensors for navigation and is capable of shooting torpedo and drop markers
+  \begin{itemize}
+  \item Optimized robot's structure and assemblies using \textbf{SolidWorks and Ansys Workbench} 
+  \item Fabricated \textbf{waterproof casings} using in-house manufacturing facilities like lathe, milling
+  \item Designed \textbf{power distribution board} for the vehicle to ensure isolation between processor and motors, and also provide circuit protection 
+  \item Formalized \textbf{experiment} to \textbf{calibrate thrusts} from vehicle's actuators to PWM signal 
+  \end{itemize}
+\item Currently mentoring the software subsystem team of our next vehicle, \textit{Triton}
+\end{itemize}}
+
+\cventry{July '16--Mar '17 \\ 
+\Colorhref{https://www.iitk.ac.in/dord/boeing/public/}{website}\\ \Colorhref{https://github.com/Boeing-Abhyast}{github}}{Bomb Disposal using Multi-Robot System}{}{}{}{
+\textit{Boeing-IIT Kanpur Joint Venture}, Prof. Shantanu Bhattacharya \& Prof. S. Kamle
+% \textit{Supervisors:} Prof. Shantanu Bhattacharya, and Prof. S. Kamle
+% \newline
+% In order to perform bomb- disposal operations in unstructured environment, the project aims to leverage the advantages of a multi- robot system comprising of an aerial and ground robot. My contributions, as a member of the ground robot sub- team, was on the navigation and map building using the ground robot. These are listed as follows:%
+\begin{itemize}%
+\item Integrated various hardware into a custom two-wheeled differential drive robot, \textit{Alpha}
+\item Performed simulation of \textit{Alpha} in \textbf{gazebo} environment for creating maps and navigation
+\item Implemented and compared the results of \texttt{RGBD-SLAM}, \texttt{ORB-SLAM}, \texttt{Gmapping}, and \texttt{Hector-SLAM} 
+\item Implemented the \textbf{object detection model `YOLOv2'} proposed by Joseph Redmon \textit{et al.} using ROS and Caffe framework to classify objects as potential explosives in real time 
+\end{itemize}}
+
+\vspace{3pt}
+
+\section{Major Course Projects}
+\cventry{Feb--Apr '17\\ 
+\Colorhref{https://github.com/Mayankm96/Stereo-Odometry-SOFT}{github}\\
+\Colorhref{https://github.com/Mayankm96/Mayankm96.github.io/blob/source/assets/documents/projects/ee698-report.pdf}{report}}{Visual Odometry using careful Feature Selection and Tracking}{}{}{}{
+\textit{Course Project for Probabilistic Robotics (EE698G)}, under Prof. Gaurav Pandey%
+\begin{itemize}%
+% \renewcommand\labelitemi{--}
+\item Implemented the algorithm for stereo odometry, adapted from the works of I. Cvi{\v{s}}i{\'c} and I. Petrovi{\'c} in `Stereo odometry based on careful feature selection and tracking'
+\item Evaluated the implemented algorithm on KITTI Dataset City 01 and Residential 07 sequences
+\end{itemize}}
+
+\cventry{Mar--Apr '17\\ 
+\Colorhref{https://github.com/Mayankm96/Motion-Planning-GUI}{github}}{MATLAB based GUI for Motion Planning}{}{}{}{
+\textit{Course Project for Robot Motion Planning (ME766A)}, under Prof. Ashish Dutta
+\begin{itemize}%
+\item Created an interactive user interface on MATLAB to run a number of motion planning algorithms such as Rapidly exploring Random Tree (RRT) and its variants, and potential field method, in a user defined 2-D environment at specified start and goal points
+\end{itemize}}
+
+\cventry{Oct--Nov '16\\
+\Colorhref{https://github.com/Mayankm96/Mayankm96.github.io/blob/source/assets/documents/projects/cs637-report.pdf}{report}}{Failure Handling in Swarm of Quadrotors}{}{}{}{
+\textit{Course Project for Embedded and Cyber-Physical Systems (CS637A)}, under Prof. Indranil Saha
+\begin{itemize}%
+\item Proposed an \textbf{extended state machine design for communication in a swarm}, with ability to handle failures, while ensuring redundancy, decentralization and anonymity
+\item Used gazebo to simulate swarm behavior in quadrotors using the \texttt{`hector-quad'}
+\item Tested communication network on hardware using X-Bees(Series 2) in broadcasting mode
+\end{itemize}}
+
+\section{Other Projects}
+
+\cventry{Oct--Nov '16}{Applying $\mathcal{H}_{\infty}$ Control to Reduce Risks of Diabetes Mellitus in Patients}{}{}{}{
+\textit{Course Project for Robust Control Systems (EE654A)}, under Prof. Ramprasad Potluri
+}
+\cventry{May--Jun '16}{Reviewing Approaches to Simultaneous Localization And Mapping (SLAM)}{}{}{}{
+\textit{NYU-IIT Kanpur Research Track}, under Prof. Farshad Khorrami (New York University)
+}
+\cventry{Feb--Mar '16}{Adjustable Medical Chair}{}{}{}{
+\textit{Course Project for course Manufacturing Processes-II (TA202A)}, under Prof. Neeraj Sinha
+}
+\cventry{Dec '15}{Finite Element Analysis in Electromagnetism}{}{}{}{
+\textit{NPDE-TCA Winter Internship}, under Dr. B.V. Rathish Kumar (IIT Kanpur)
+}
+
+
+\section{Teaching Experience}
+\cventry{Upcoming}{Autonomous Navigation}{AE640A}{Prof. Mangal Kothari, IIT Kanpur}{}{
+Preparation of course material and assignments
+}
+
+\section{Academic Achievements}
+\cvitem{2017}{Recipient of DAAD-WISE Scholarship to pursue a summer internship in Germany}
+\cvitem{2016}{Received Academic Excellence Award at IIT Kanpur for performance in 2015-16}
+\cvitem{2016}{Secured $2^{nd}$ place in Student Underwater Vehicle (SAVe) competition at NIOT, Chennai}
+\cvitem{2014}{Secured 656 rank in JEE Advanced among 150,000 students}
+\cvitem{2012}{Awarded the Kishore Vaigyanik Protsahan Yogna (KVPY) Fellowship}
+\cvitem{2010}{Awarded the National Talent Search Examination (NTSE) Scholarship}
+
+\section{Technical skills}
+\cvitem{\textbf{Software:}}{Autodesk Inventor, SolidWorks, Ansys Workbench, PSpice, UnrealEngine Editor}
+\cvitem{\textbf{Languages:}}{C++, C, Python, Shell(bash), MATLAB, HTML, CSS}
+\cvitem{\textbf{Frameworks:}}{Caffe, ROS, OpenCV, PCL, AirSim, Gazebo, V-REP, Arduino IDE}
+\cvitem{\textbf{Other:}}{Git, Octave, \LaTeX}
+
+\section{Relevant Coursework}
+\cvitem{\textbf{Robotics:}}{Probabilistic Mobile Robotics, Robot Manipulators: Dynamics and Control, Robot Motion Planning, Embedded and Cyber-Physical Systems, Robust Control Systems}
+\cvitem{\textbf{Mathematics:}}{Matrix Theory and Linear Estimation, Topics in Probabilistic Modeling and Inferences*, Probability and Statistics, Ordinary/Partial Differential Equations, Complex Analysis}
+\cvitem{\textbf{Algorithms:}}{Data Structures and Algorithms, Fundamentals of Programming}
+\cvitem{\textbf{Electronics:}}{Power Electronics, Digital Electronics, Microelectronics- I, Power Systems}
+\cvitem{}{\hfill \small{\textit{* to be completed in Spring 2018}}}
+
+\section{Positions of Responsibility}
+
+\cventry{Jan '16--present}{Team Leader}{AUV Team}{IIT Kanpur}{}{
+\begin{itemize}%
+% \renewcommand\labelitemi{--}
+\item Leading a team of 16 members from various majors to develop our next underwater vehicle 
+\item Overseeing various operational and technical aspects of the project 
+\item Managed a funding of Rs.769,000 for the development of our first vehicle \textit{Varun}
+\end{itemize}}
+
+\cventry{Apr '16--Mar '17}{Coordinator}{Robotics Club}{IIT Kanpur}{}{
+\begin{itemize}%
+% \renewcommand\labelitemi{--}
+\item Led a team of 18 members and handled a budget of Rs.125,000 to organize various events, workshops, and competitions for robotics enthusiasts in the campus community
+\item \textbf{Mentored} and ensured completion of \textbf{summer projects} on facial recognition, 3-DOF robot manipulator, gesture-based gaming console, and Wi-Fi based indoor localization system 
+\item Organized a week-long lecture series in collaboration with the Institute's Center of Mechatronics; presented \textbf{talks} on \textbf{sensing and actuation, micro-controllers and CAD designing}
+\end{itemize}}
+
+\cventry{Aug '15--July '16}{Student Guide \& Academic Mentor}{Counseling Service}{IIT Kanpur}{}{
+\begin{itemize}%
+% \renewcommand\labelitemi{--}
+\item Assisted 6 freshmen students in adjusting to the college environment
+\item Provided personal tutoring to academically weak students for their courses
+\end{itemize}}
+
+\section{Miscellaneous}
+\cvitem{Oct '17}{Conducted two-days \textbf{workshop} on \textbf{`Robot Simulation using ROS and Gazebo'}}
+\cvitem{Sept '17}{Presented a \textbf{talk} on \textbf{`Applications of Deep Learning in Robotics'} for Machine Learning Research Day (MLRD) organized by \href{https://www.cse.iitk.ac.in/users/sigml/}{SIGML}, IIT Kanpur}
+\cvitem{Oct '15}{Secured $2^{nd}$ place in inter-college lawn tennis tournament at SNU, Greater Noida}
+\cvitem{Mar '15}{Secured $3^{rd}$ place at inter-college lawn tennis tournament at IIT, Roorkee}
+
+% \section{References}
+% \begin{cvcolumns}
+%   \cvcolumn{Category 1}{\begin{itemize}\item Person 1\item Person 2\item Person 3\end{itemize}}
+%   \cvcolumn{Category 2}{Amongst others:\begin{itemize}\item Person 1, and\item Person 2\end{itemize}(more upon request)}
+%   \cvcolumn[0.5]{All the rest \& some more}{\textit{That} person, and \textbf{those} also (all available upon request).}
+% \end{cvcolumns}
+
+% Publications from a BibTeX file without multibib
+%  for numerical labels: \renewcommand{\bibliographyitemlabel}{\@biblabel{\arabic{enumiv}}}% CONSIDER MERGING WITH PREAMBLE PART
+%   to redefine the heading string ("Publications"): \renewcommand{\refname}{Articles}
+% \nocite{*}
+% \bibliographystyle{plain}
+% \bibliography{publications}                        % 'publications' is the name of a BibTeX file
+
+% Publications from a BibTeX file using the multibib package
+%\section{Publications}
+%\nocitebook{book1,book2}
+%\bibliographystylebook{plain}
+%\bibliographybook{publications}                   % 'publications' is the name of a BibTeX file
+%\nocitemisc{misc1,misc2,misc3}
+%\bibliographystylemisc{plain}
+%\bibliographymisc{publications}                   % 'publications' is the name of a BibTeX file
+
+\end{document}
