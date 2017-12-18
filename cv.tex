@@ -1,5 +1,6 @@
-%% start of file `template.tex'.
+%% start of file `cv.tex'.
 %% Copyright 2006-2015 Xavier Danaux (xdanaux@gmail.com).
+%% Modifications 2017 Mayank Mittal (mayankm.iitk@gmail.com)
 %
 % This work may be distributed and/or modified under the
 % conditions of the LaTeX Project Public License version 1.3c,
@@ -19,7 +20,7 @@
 
 \definecolor{color0}{rgb}{0,0,0}% black
 \definecolor{color1}{rgb}{0.545098,0,0}% burgundy
-\definecolor{color1}{rgb}{0.4,0.4,0.4} % Testcolor-------being used 
+\definecolor{color1}{rgb}{0.4,0.4,0.4} % Testcolor-------being used
 \definecolor{color2}{rgb}{0.45,0.45,0.45}% grey
 \endinput
 %% end of file `moderncvcolorburgundy.sty'.
@@ -116,7 +117,7 @@ Senior, Dept. of Electrical Engineering, IIT Kanpur, India\hfill \textbf{Website
 
 \section{Research Experience}
 \cventry{May--July '17}{Predicting Landing Sites from Aerial Images of Disaster Scenes}{}{}{}{
-\textit{University of Freiburg}, Prof. Wolfram Burgard 
+\textit{University of Freiburg}, Prof. Wolfram Burgard
 % \textit{Supervisors:}  Prof. Wolfram Burgard (University of Freiburg)
 % \newline
 % The project aims to use deep learning to detect landing sites for a drone in a hostile environment by only using the input from a ground facing camera mounted on it.%
@@ -129,8 +130,23 @@ Senior, Dept. of Electrical Engineering, IIT Kanpur, India\hfill \textbf{Website
 
 \vspace{3pt}
 
+\cventry{July '16--Mar '17 \\
+\Colorhref{https://www.iitk.ac.in/dord/boeing/public/}{website}\\ \Colorhref{https://github.com/Boeing-Abhyast}{github}}{Bomb Disposal using Multi-Robot System}{}{}{}{
+\textit{Boeing-IIT Kanpur Joint Venture}, Prof. Shantanu Bhattacharya \& Prof. S. Kamle
+% \textit{Supervisors:} Prof. Shantanu Bhattacharya, and Prof. S. Kamle
+% \newline
+% In order to perform bomb- disposal operations in unstructured environment, the project aims to leverage the advantages of a multi- robot system comprising of an aerial and ground robot. My contributions, as a member of the ground robot sub- team, was on the navigation and map building using the ground robot. These are listed as follows:%
+\begin{itemize}%
+\item Integrated various hardware into a custom two-wheeled differential drive robot, \textit{Alpha}
+\item Performed simulation of \textit{Alpha} in \textbf{gazebo} environment for creating maps and navigation
+\item Implemented and compared the results of \texttt{RGBD-SLAM}, \texttt{ORB-SLAM}, \texttt{Gmapping}, and \texttt{Hector-SLAM}
+\item Implemented the \textbf{object detection model `YOLOv2'} by Joseph Redmon \textit{et al.} using ROS and Caffe framework to classify objects as potential explosives in real time
+\end{itemize}}
+
+\vspace{3pt}
+
 \cventry{Nov '14--present \\
-\Colorhref{https://auviitk.com}{website}\\ 
+\Colorhref{https://auviitk.com}{website}\\
 \Colorhref{https://github.com/AUV-IITK}{github}\\
 \Colorhref{https://github.com/Mayankm96/Mayankm96.github.io/blob/source/assets/documents/projects/ee392-report.pdf}{report}}{Autonomous Underwater Vehicle (AUV)}{}{}{}{
 \textit{IIT Kanpur}, Prof. K.S. Venkatesh \& Prof. Sachin Y. Shinde
@@ -140,69 +156,81 @@ Senior, Dept. of Electrical Engineering, IIT Kanpur, India\hfill \textbf{Website
 \begin{itemize}%
 \item Designed and developed \textbf{Institute's first AUV}, \textit{Varun}, which uses computer vision and dead- reckoning sensors for navigation and is capable of shooting torpedo and drop markers
   \begin{itemize}
-  \item Optimized robot's structure and assemblies using \textbf{SolidWorks and Ansys Workbench} 
+  \item Optimized robot's structure and assemblies using \textbf{SolidWorks and Ansys Workbench}
   \item Fabricated \textbf{waterproof casings} using in-house manufacturing facilities like lathe, milling
-  \item Designed \textbf{power distribution board} for the vehicle to ensure isolation between processor and motors, and also provide circuit protection 
-  \item Formalized \textbf{experiment} to \textbf{calibrate thrusts} from vehicle's actuators to PWM signal 
+  \item Designed \textbf{power distribution board} for the vehicle to ensure isolation between processor and motors, and also provide circuit protection
+  \item Formalized \textbf{experiment} to \textbf{calibrate thrusts} from vehicle's actuators to PWM signal
   \end{itemize}
 \item Currently mentoring the software subsystem team of our next vehicle, \textit{Triton}
 \end{itemize}}
 
-\cventry{July '16--Mar '17 \\ 
-\Colorhref{https://www.iitk.ac.in/dord/boeing/public/}{website}\\ \Colorhref{https://github.com/Boeing-Abhyast}{github}}{Bomb Disposal using Multi-Robot System}{}{}{}{
-\textit{Boeing-IIT Kanpur Joint Venture}, Prof. Shantanu Bhattacharya \& Prof. S. Kamle
-% \textit{Supervisors:} Prof. Shantanu Bhattacharya, and Prof. S. Kamle
-% \newline
-% In order to perform bomb- disposal operations in unstructured environment, the project aims to leverage the advantages of a multi- robot system comprising of an aerial and ground robot. My contributions, as a member of the ground robot sub- team, was on the navigation and map building using the ground robot. These are listed as follows:%
-\begin{itemize}%
-\item Integrated various hardware into a custom two-wheeled differential drive robot, \textit{Alpha}
-\item Performed simulation of \textit{Alpha} in \textbf{gazebo} environment for creating maps and navigation
-\item Implemented and compared the results of \texttt{RGBD-SLAM}, \texttt{ORB-SLAM}, \texttt{Gmapping}, and \texttt{Hector-SLAM} 
-\item Implemented the \textbf{object detection model `YOLOv2'} proposed by Joseph Redmon \textit{et al.} using ROS and Caffe framework to classify objects as potential explosives in real time 
-\end{itemize}}
-
-\vspace{3pt}
-
 \section{Major Course Projects}
-\cventry{Feb--Apr '17\\ 
+\cventry{Feb--Apr '17\\
 \Colorhref{https://github.com/Mayankm96/Stereo-Odometry-SOFT}{github}\\
 \Colorhref{https://github.com/Mayankm96/Mayankm96.github.io/blob/source/assets/documents/projects/ee698-report.pdf}{report}}{Visual Odometry using careful Feature Selection and Tracking}{}{}{}{
-\textit{Course Project for Probabilistic Robotics (EE698G)}, under Prof. Gaurav Pandey%
+\textit{Course Project for Probabilistic Robotics (EE698G)}, Prof. Gaurav Pandey%
 \begin{itemize}%
 % \renewcommand\labelitemi{--}
 \item Implemented the algorithm for stereo odometry, adapted from the works of I. Cvi{\v{s}}i{\'c} and I. Petrovi{\'c} in `Stereo odometry based on careful feature selection and tracking'
 \item Evaluated the implemented algorithm on KITTI Dataset City 01 and Residential 07 sequences
 \end{itemize}}
 
-\cventry{Mar--Apr '17\\ 
+\vspace{3pt}
+
+\cventry{Mar--Apr '17\\
 \Colorhref{https://github.com/Mayankm96/Motion-Planning-GUI}{github}}{MATLAB based GUI for Motion Planning}{}{}{}{
-\textit{Course Project for Robot Motion Planning (ME766A)}, under Prof. Ashish Dutta
+\textit{Course Project for Robot Motion Planning (ME766A)}, Prof. Ashish Dutta
 \begin{itemize}%
 \item Created an interactive user interface on MATLAB to run a number of motion planning algorithms such as Rapidly exploring Random Tree (RRT) and its variants, and potential field method, in a user defined 2-D environment at specified start and goal points
 \end{itemize}}
 
+\vspace{3pt}
+
 \cventry{Oct--Nov '16\\
 \Colorhref{https://github.com/Mayankm96/Mayankm96.github.io/blob/source/assets/documents/projects/cs637-report.pdf}{report}}{Failure Handling in Swarm of Quadrotors}{}{}{}{
-\textit{Course Project for Embedded and Cyber-Physical Systems (CS637A)}, under Prof. Indranil Saha
+\textit{Course Project for Embedded and Cyber-Physical Systems (CS637A)}, Prof. Indranil Saha
 \begin{itemize}%
 \item Proposed an \textbf{extended state machine design for communication in a swarm}, with ability to handle failures, while ensuring redundancy, decentralization and anonymity
-\item Used gazebo to simulate swarm behavior in quadrotors using the \texttt{`hector-quad'}
+\item Used gazebo to simulate swarm behavior in quadrotors using \texttt{hector-quad} packages
 \item Tested communication network on hardware using X-Bees(Series 2) in broadcasting mode
 \end{itemize}}
 
 \section{Other Projects}
 
 \cventry{Oct--Nov '16}{Applying $\mathcal{H}_{\infty}$ Control to Reduce Risks of Diabetes Mellitus in Patients}{}{}{}{
-\textit{Course Project for Robust Control Systems (EE654A)}, under Prof. Ramprasad Potluri
+\textit{Course Project for Robust Control Systems (EE654A)}, Prof. Ramprasad Potluri
+\begin{itemize}%
+\item Proposed an alternate design to the original controller by P. Colmegna \textit{et al.}, \item Used \textbf{Robust Control Toolbox} and \textbf{Simulink}  to show that new controller ensured a better performance for the considered nominal model of adult patient
+\end{itemize}
 }
+
+\vspace{3pt}
+
 \cventry{May--Jun '16}{Reviewing Approaches to Simultaneous Localization And Mapping (SLAM)}{}{}{}{
-\textit{NYU-IIT Kanpur Research Track}, under Prof. Farshad Khorrami (New York University)
+\textit{NYU-IIT Kanpur Research Track}, Prof. Farshad Khorrami (New York University)
+\begin{itemize}%
+\item Reviewed \textbf{Kalman Filter} and \textbf{Monte- Carlo methods} for back-end system in SLAM
+\item Implemented \textbf{EKF SLAM} in virtual environment through \textbf{V-REP} and MATLAB
+\end{itemize}
 }
+
+\vspace{3pt}
+
 \cventry{Feb--Mar '16}{Adjustable Medical Chair}{}{}{}{
-\textit{Course Project for course Manufacturing Processes-II (TA202A)}, under Prof. Neeraj Sinha
+\textit{Course Project for course Manufacturing Processes-II (TA202A)}, Prof. Neeraj Sinha
+\begin{itemize}%
+\item Designed and manufactured a scaled-down model of \textbf{dental chair} with independent controls for various motion, using operations like welding, turning, milling, drilling and fitting
+\end{itemize}
 }
+
+\vspace{3pt}
+
 \cventry{Dec '15}{Finite Element Analysis in Electromagnetism}{}{}{}{
-\textit{NPDE-TCA Winter Internship}, under Dr. B.V. Rathish Kumar (IIT Kanpur)
+\textit{NPDE-TCA Winter Internship}, Dr. B.V. Rathish Kumar (IIT Kanpur)
+\begin{itemize}%
+\item Studied the Ritz-vibrational and Glarenkin's finite element analysis in 1- and 2- dimensions
+\item Solved 2-D boundary valued problems on electrostatics and time harmonics on MATLAB
+\end{itemize}
 }
 
 
@@ -212,18 +240,21 @@ Preparation of course material and assignments
 }
 
 \section{Academic Achievements}
-\cvitem{2017}{Recipient of DAAD-WISE Scholarship to pursue a summer internship in Germany}
-\cvitem{2016}{Received Academic Excellence Award at IIT Kanpur for performance in 2015-16}
-\cvitem{2016}{Secured $2^{nd}$ place in Student Underwater Vehicle (SAVe) competition at NIOT, Chennai}
-\cvitem{2014}{Secured 656 rank in JEE Advanced among 150,000 students}
-\cvitem{2012}{Awarded the Kishore Vaigyanik Protsahan Yogna (KVPY) Fellowship}
-\cvitem{2010}{Awarded the National Talent Search Examination (NTSE) Scholarship}
+\cvitem{2017}{\textbf{WISE Scholarship} by DAAD (Awarded to 192 students in the country)}
+\cvitem{2016}{\textbf{Academic Excellence Award}, IIT Kanpur (Awarded to 60 students out of 840)}
+\cvitem{2016}{$\mathbf{2^{nd}}$ \textbf{place} in \textbf{Student Underwater Vehicle} (SAVe) competition by NIOT, Chennai}
+\cvitem{2014}{\textbf{All India Rank 656} in JEE Advanced among 150,000 students}
+\cvitem{2014}{\textbf{All India Rank 324} in JEE Mains among 1.2 million students}
+\cvitem{2012}{\textbf{Kishore Vaigyanik Protsahan Yogna} (KVPY) Fellowship by Govt. of India }
+\cvitem{2010}{\textbf{National Talent Search Scholarship} (NTSE)  by Govt. of India}
 
 \section{Technical skills}
-\cvitem{\textbf{Software:}}{Autodesk Inventor, SolidWorks, Ansys Workbench, PSpice, UnrealEngine Editor}
-\cvitem{\textbf{Languages:}}{C++, C, Python, Shell(bash), MATLAB, HTML, CSS}
-\cvitem{\textbf{Frameworks:}}{Caffe, ROS, OpenCV, PCL, AirSim, Gazebo, V-REP, Arduino IDE}
-\cvitem{\textbf{Other:}}{Git, Octave, \LaTeX}
+\cvitem{\textbf{Software:}}{Gazebo, UnrealEngine Editor (AirSim), V-REP, SolidWorks, Ansys, KiCAD, PSpice}
+\cvitem{\textbf{Languages:}}{Python, C++, C, Shell(bash), MATLAB, HTML, CSS}
+\cvitem{\textbf{Frameworks:}}{ROS, Caffe, TensorFlow, OpenCV, PCL}
+% \cvitem{\textbf{Simulation:}}{Gazebo, UnrealEngine Editor (AirSim), V-REP}
+% \cvitem{\textbf{Platforms:}}{dsPIC, Arduino, Odroid, NVidia Jetson, TIVA-C Launchpad}
+\cvitem{\textbf{Other:}}{Git, GNU Octave, \LaTeX}
 
 \section{Relevant Coursework}
 \cvitem{\textbf{Robotics:}}{Probabilistic Mobile Robotics, Robot Manipulators: Dynamics and Control, Robot Motion Planning, Embedded and Cyber-Physical Systems, Robust Control Systems}
@@ -232,21 +263,23 @@ Preparation of course material and assignments
 \cvitem{\textbf{Electronics:}}{Power Electronics, Digital Electronics, Microelectronics- I, Power Systems}
 \cvitem{}{\hfill \small{\textit{* to be completed in Spring 2018}}}
 
+\clearpage
+
 \section{Positions of Responsibility}
 
 \cventry{Jan '16--present}{Team Leader}{AUV Team}{IIT Kanpur}{}{
 \begin{itemize}%
 % \renewcommand\labelitemi{--}
-\item Leading a team of 16 members from various majors to develop our next underwater vehicle 
-\item Overseeing various operational and technical aspects of the project 
-\item Managed a funding of Rs.769,000 for the development of our first vehicle \textit{Varun}
+\item Leading a team of 16 members from various majors to develop our next underwater vehicle
+\item Overseeing various \textbf{operational and technical} aspects of the project
+\item Managed funding of Rs.769,000 for the development of our first vehicle \textit{Varun}
 \end{itemize}}
 
 \cventry{Apr '16--Mar '17}{Coordinator}{Robotics Club}{IIT Kanpur}{}{
 \begin{itemize}%
 % \renewcommand\labelitemi{--}
 \item Led a team of 18 members and handled a budget of Rs.125,000 to organize various events, workshops, and competitions for robotics enthusiasts in the campus community
-\item \textbf{Mentored} and ensured completion of \textbf{summer projects} on facial recognition, 3-DOF robot manipulator, gesture-based gaming console, and Wi-Fi based indoor localization system 
+\item \textbf{Mentored} and ensured completion of \textbf{summer projects} on facial recognition, 3-DOF robot manipulator, gesture-based gaming console, and Wi-Fi based indoor localization system
 \item Organized a week-long lecture series in collaboration with the Institute's Center of Mechatronics; presented \textbf{talks} on \textbf{sensing and actuation, micro-controllers and CAD designing}
 \end{itemize}}
 
