@@ -1,3 +1,11 @@
+## Preview
+
+You can see [PDF](cv.pdf)
+
+| Page. 1 | Page. 2 |
+|:---:|:---:|
+| [![Résumé](img/cv_page1.png)](cv.pdf)  | [![Résumé](img/cv_page2.png)](cv.pdf) |
+
 ## How to Use
 
 ### Requirements
@@ -15,12 +23,6 @@ xelatex cv.tex
 ```
 
 This should result in the creation of [`cv.pdf`](cv.pdf)
-
-## Preview
-
-| Page. 1 | Page. 2 |
-|:---:|:---:|
-| [![Résumé](img/cv_page1.png)](cv.pdf)  | [![Résumé](img/cv_page2.png)](cv.pdf) |
 
 ## Credits
 
